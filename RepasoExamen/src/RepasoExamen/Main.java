@@ -9,11 +9,14 @@ public class Main {
 
         Scanner in = new Scanner(System.in);
 
+
+        //ejercicio1
         String [] lista;
 
         String cadena = in.nextLine();
 
         lista = cadena.split(" ");
+
 
         ArrayList <String> listado = new ArrayList();
 
@@ -27,6 +30,7 @@ public class Main {
         }
 
         System.out.println();
+        //Ejercicio2
 
         System.out.println("Listado de Juan: ");
         System.out.println(listado.toString().replace("[","").replace("]","").trim());
@@ -44,6 +48,7 @@ public class Main {
         System.out.println("Listado de María: ");
         System.out.println(listado.toString().replace("[","").replace("]","").trim());
 
+        //Ejercicio3
 
         HashMap <String, Integer> factura = new HashMap<>();
 
@@ -60,8 +65,8 @@ public class Main {
             factura.put(aux.getKey(),in.nextInt());
 
             total+=aux.getValue();
-
         }
+
         System.out.println("TICKET DE COMPRA:");
 
         for (Map.Entry<String,Integer> aux: factura.entrySet()){
@@ -89,14 +94,8 @@ public class Main {
         Gastos gasto1 = new Gastos("Junio", "2023");
         gasto1.addCompra(compra1);
         gasto1.addCompra(compra2);
+        gasto1.addCompra(compra2);
 
-        
-        compra1.calcularTicket();
-        compra2.calcularTicket();
-        gasto1.calcularGastos();
-        
-        System.out.println(gasto1);
-        
 
         StringBuilder string = new StringBuilder(cadena);
 
