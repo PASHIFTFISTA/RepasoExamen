@@ -13,9 +13,7 @@ public class Canciones {
 
     @Override
     public String toString() {
-        return "Canciones{" +
-                "nombre='" + nombre + '\'' +
-                ", duracion=" + duracion +
-                '}';
+        return "{\"" + nombre + "\", \"" + duracion + "\"}";
     }
+
 }

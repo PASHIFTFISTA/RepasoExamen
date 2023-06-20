@@ -5,13 +5,13 @@ import java.util.ArrayList;
 public class Cantante implements interfaz_cantante{
 
     private String NombreApellido;
-    private double Caché;
+    private int Caché;
     private String GeneroMusical;
 
-    ArrayList <Disco> discografia;
+    public ArrayList <Disco> discografia;
 
 
-    public Cantante(String nombre, double Cache, String Genero){
+    public Cantante(String nombre, int Cache, String Genero){
 
         discografia = new ArrayList<>();
         this.NombreApellido=nombre;
@@ -22,14 +22,24 @@ public class Cantante implements interfaz_cantante{
 
     @Override
     public String toString() {
-        return "Cantante{" +
-                "NombreApellido='" + NombreApellido + '\'' +
-                ", Caché=" + Caché +
-                ", GeneroMusical='" + GeneroMusical + '\'' +
-                ", discografia=" + discografia +
-                '}';
+        return "Cantante: " +
+                  NombreApellido+"\n"+
+                "Caché: " + Caché+"€" +"\n" +
+                "GeneroMusical: " + GeneroMusical  + "\n" +
+                 discografia;
     }
 
+    public String toCantante() {
+        return "Cantante: " +
+                NombreApellido+"\n"+
+                "Caché: " + Caché+"€" +"\n" +
+                "GeneroMusical: " + GeneroMusical;
+    }
+
+    public int getCaché(){
+
+        return this.Caché;
+    }
     @Override
     public Hit getHit() {
         return null;

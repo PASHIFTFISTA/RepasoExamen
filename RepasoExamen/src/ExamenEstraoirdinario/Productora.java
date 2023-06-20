@@ -1,11 +1,11 @@
 package ExamenEstraoirdinario;
 
-import java.util.InputMismatchException;
-import java.util.Scanner;
+import java.util.*;
 
 public class Productora {
 
     public static void main(String[] args) {
+        ArrayList <Cantante> cantantes = new ArrayList<>();
 
 
         Cantante Miley = new Cantante("Miley Cyrus",500000,"POP");
@@ -18,8 +18,50 @@ public class Productora {
         Canciones cancion5 = new Canciones("Handstad",3.25);
         Canciones cancion6 = new Canciones("River",2.42);
         Miley1.setHit("Flowers",3.20,10975946);
+        Miley1.disco.add(cancion1);
+        Miley1.disco.add(cancion2);
+        Miley1.disco.add(cancion3);
+        Miley1.disco.add(cancion4);
+        Miley1.disco.add(cancion5);
+        Miley1.disco.add(cancion6);
+
+        Miley.discografia.add(Miley1);
+
+        cantantes.add(Miley);
+
+        Cantante aux = cantantes.get(0);
+
+        for (Cantante cantante:cantantes) {
+
+            if (cantante.getCaché()> aux.getCaché()){
+                aux=cantante;
+            }
+
+        }
+        Cantante Mile = new Cantante("Miley circus",600000,"POP");
+
+        Cantante asasas = new Cantante("Msass",100000,"POP");
+
+        cantantes.add(asasas);
+
+        cantantes.add(Mile);
 
 
+        // Ordenar los cantantes por caché descendente
+        Collections.sort(cantantes, Comparator.comparingInt(Cantante::getCaché).reversed());
+
+
+
+
+        System.out.println(cantantes.get(1).toString().replace("[","").replace("]","").trim());
+
+
+        for (Cantante aux2:cantantes) {
+
+            System.out.println();
+            System.out.println(aux2.toCantante());
+            System.out.println();
+        }
 
         Scanner in = new Scanner(System.in);
 

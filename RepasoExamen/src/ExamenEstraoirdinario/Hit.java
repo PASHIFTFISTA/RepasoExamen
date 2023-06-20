@@ -6,12 +6,10 @@ public class Hit extends Canciones{
 
     @Override
     public String toString() {
-        return "Hit{" +
-                "visualizaciones=" + visualizaciones +
-                ", nombre='" + nombre + '\'' +
-                ", duracion=" + duracion +
-                '}';
+        return String.format("{\"%s\", \"%s\", \"%.0f\"}", nombre, duracion, visualizaciones);
     }
+
+
 
     public Hit(String nombre, double duracion, float visitas) {
         super(nombre, duracion);

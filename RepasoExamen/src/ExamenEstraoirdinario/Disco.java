@@ -13,12 +13,11 @@ public class Disco {
 
     @Override
     public String toString() {
-        return "Disco{" +
-                "titulo='" + titulo + '\'' +
-                ", Lanzamiento=" + Lanzamiento +
-                ", HIT=" + HIT +
-                ", disco=" + disco +
-                '}';
+        return "Disco: " +
+                 titulo + "\n" +
+                "Año: " + Lanzamiento +"\n"+
+                "Canciones: " + disco+"\n"+
+                "HIT: " + HIT +"\n";
     }
 
     public Disco (String titulo, int year){
